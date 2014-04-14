@@ -104,7 +104,7 @@
                 and( is_set($additional_attribute_map[ $source_attribute.data_type_string ]), $additional_attribute_map[ $source_attribute.data_type_string ]|contains( $dest_attribute.data_type_string ) ),
                 and(is_set( $simple_conversion[ $source_attribute.data_type_string ] ), $simple_conversion[ $source_attribute.data_type_string ]|contains( $dest_attribute.data_type_string ))
              )}
-        <option value="{$source_attribute.identifier}"{if eq( $iter, 0 )} selected="selected"{/if}>{$source_attribute.name} ({$source_attribute.data_type_string})</option>
+        <option value="{$source_attribute.identifier}"{if or( eq( $source_attribute.identifier, $dest_attribute.identifier ), eq( $iter, 0 ) )} selected="selected"{/if}>{$source_attribute.name} ({$source_attribute.data_type_string})</option>
           {set $iter=inc( $iter )}
         {/if}
     {/foreach}

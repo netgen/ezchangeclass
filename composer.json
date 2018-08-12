@@ -1,7 +1,17 @@
 {
     "name": "netgen/ezchangeclass",
-    "type": "netgen-legacy-extension",
+    "description": "This extension allows to change a content object's content class.",
+    "type": "ezpublish-legacy-extension",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Bartek Modzelewski"
+        }
+    ],
     "require": {
-        "netgen/netgen-legacy-installer": "*"
+        "ezsystems/ezpublish-legacy-installer": "^2.0.4"
+    },
+    "extra": {
+        "ezpublish-legacy-extension-name": "ezchangeclass"
     }
 }
